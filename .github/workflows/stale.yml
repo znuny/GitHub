@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/stale@v9
         with:
-          debug-only: true
+          debug-only: false
           start-date: 2025-03-18T00:00:00Z
           # If set to true, the issues or the pull requests with a milestone will not be marked as stale automatically.
           exempt-all-milestones: true
