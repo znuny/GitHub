@@ -13,7 +13,7 @@ To use these reusable workflows in your repository, reference them in your workf
 ```yaml
 jobs:
   your-job-name:
-    uses: znuny/GitHub/.github/workflows/workflow-name.yml@branch
+    uses: znuny/GitHub/workflows/workflow-name.yml@branch
 ```
 
 ## Available Workflows
@@ -38,7 +38,7 @@ on:
 
 jobs:
   Stale:
-    uses: znuny/GitHub/.github/workflows/stale.yml@dev
+    uses: znuny/GitHub/workflows/stale.yml@dev
 ```
 
 ---
