@@ -19,12 +19,12 @@ jobs:
 
           # Issue
           days-before-issue-stale: 60
-          stale-issue-message: 'This issue is stale because it has been open 60 days with no activity. Remove stale label or comment or this will be closed in 7 days.'
+          stale-issue-message: 'This issue is stale because it has been open 60 days with no activity. Remove stale label or comment or this will be closed in 10 days.'
           stale-issue-label: Stale
 
           days-before-issue-close: 10
           close-issue-message: 'This issue was closed because it has been stalled for 10 days with no activity.'
-          close-issue-label: Stale
+          # close-issue-label: Stale
 
           exempt-issue-labels: 4 - verified,4 - internal Issue/MR,3 - wait for merge,3 - wait for pipeline,3 - wait for reviewer,3 - work in progress
 
@@ -33,8 +33,13 @@ jobs:
           stale-pr-message: 'This PR is stale because it has been open 60 days with no activity. Remove stale label or comment or this will be closed in 10 days.'
           stale-pr-label: Stale
 
-          close-pr-message: 'This PR was closed because it has been stalled for 10 days with no activity.'
           days-before-pr-close: 10
-          close-pr-label: Stale
+          close-pr-message: 'This PR was closed because it has been stalled for 10 days with no activity.'
+          # close-pr-label: Stale
 
           exempt-pr-labels: 4 - verified,4 - internal Issue/MR,3 - wait for merge,3 - wait for pipeline,3 - wait for reviewer,3 - work in progress
+
+          # Additional settings to prevent the stale label from being removed too quickly
+          remove-stale-when-updated: false
+          remove-issue-stale-when-updated: false
+          remove-pr-stale-when-updated: false
